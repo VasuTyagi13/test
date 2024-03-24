@@ -4,7 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header .container h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    header nav {
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style: none;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .hero {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about,
+    .portfolio,
+    .contact {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .about h2,
+    .portfolio h2,
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,17 +130,32 @@
     </div>
   </section>
 
-  <section class="featured">
+  <section class="about">
     <div class="container">
-      <h2>Featured Projects</h2>
+      <h2>About Me</h2>
+      <p>I am a cybersecurity professional with expertise in network security, cryptography, and ethical hacking.</p>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2>My Portfolio</h2>
       <div class="project">
-        <h3>Project Name</h3>
-        <p>Description of the project goes here.</p>
+        <h3>Network Security</h3>
+        <p>Implemented robust network security measures.</p>
       </div>
       <div class="project">
-        <h3>Project Name</h3>
-        <p>Description of the project goes here.</p>
+        <h3>Ethical Hacking</h3>
+        <p>Conducted penetration testing to identify vulnerabilities.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you have any inquiries or would like to discuss a cybersecurity project, feel free to reach out to me.</p>
+      <p>Email: example@example.com</p>
     </div>
   </section>
 

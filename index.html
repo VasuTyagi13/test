@@ -4,55 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity Journey Blog</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
 </head>
 <body>
     <header>
         <h1>Cybersecurity Journey Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#posts">Posts</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my cybersecurity journey blog! Here, I'll be documenting my progress from being a complete novice to becoming a cybersecurity professional.</p>
-    </section>
     
     <section id="posts">
         <h2>Blog Posts</h2>
-        <article>
-            <h3>My First Step into Cybersecurity</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula at velit vestibulum molestie. Donec in metus eu arcu lacinia hendrerit.</p>
-            <p><a href="#">Read More</a></p>
+        <!-- Fetch blog posts from separate HTML files using JavaScript -->
+        <article id="post1">
+            <h3>Loading...</h3>
+            <p>Loading...</p>
+            <p><a href="post1.html">Read More</a></p>
         </article>
-        <article>
-            <h3>Learning about Encryption</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula at velit vestibulum molestie. Donec in metus eu arcu lacinia hendrerit.</p>
-            <p><a href="#">Read More</a></p>
+        
+        <article id="post2">
+            <h3>Loading...</h3>
+            <p>Loading...</p>
+            <p><a href="post2.html">Read More</a></p>
         </article>
+        <!-- Add more articles as needed -->
     </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Have questions or suggestions? Feel free to reach out to me!</p>
-        <form action="submit.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <input type="submit" value="Send">
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Cybersecurity Journey Blog</p>
-    </footer>
+
+    <script>
+        // Fetch content for post1.html
+        fetch('post1.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const post1Title = doc.querySelector('title').textContent;
+                const post1Content = doc.querySelector('body').innerHTML;
+
+                document.getElementById('post1').innerHTML = `
+                    <h3>${post1Title}</h3>
+                    <p>${post1Content}</p>
+                    <p><a href="post1.html">Read More</a></p>
+                `;
+            });
+
+        // Fetch content for post2.html
+        fetch('post2.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const post2Title = doc.querySelector('title').textContent;
+                const post2Content = doc.querySelector('body').innerHTML;
+
+                document.getElementById('post2').innerHTML = `
+                    <h3>${post2Title}</h3>
+                    <p>${post2Content}</p>
+                    <p><a href="post2.html">Read More</a></p>
+                `;
+            });
+        // Repeat this pattern for each blog post
+    </script>
 </body>
 </html>

@@ -53,35 +53,20 @@ section h2 {
     margin-bottom: 15px;
 }
 
-/* Form styles */
-form {
-    margin-top: 15px;
+/* Video section styles */
+.video-container {
+    position: relative;
+    width: 60%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-}
-
-input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #555;
+    height: 100%;
 }
 
 /* Footer styles */

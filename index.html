@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Slider</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cybersecurity Journey Blog</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
 </head>
 <body>
-
-<div class="blog-slider">
-  <div class="blog-slider__wrp swiper-wrapper">
-    <!-- Content will be dynamically loaded here -->
-  </div>
-  <div class="blog-slider__pagination"></div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
+    <header>
+        <h1>Cybersecurity Journey Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my cybersecurity journey blog! Here, I'll be documenting my progress from being a complete novice to becoming a cybersecurity professional.</p>
+    </section>
+    
+    <section id="posts">
+        <h2>Blog Posts</h2>
+        <!-- Your blog posts will go here -->
+        <article>
+            <h3>My First Step into Cybersecurity</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula at velit vestibulum molestie. Donec in metus eu arcu lacinia hendrerit.</p>
+            <p><a href="#">Read More</a></p>
+        </article>
+        <article>
+            <h3>Learning about Encryption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula at velit vestibulum molestie. Donec in metus eu arcu lacinia hendrerit.</p>
+            <p><a href="#">Read More</a></p>
+        </article>
+        <!-- Add more articles as needed -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have questions or suggestions? Feel free to reach out to me!</p>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Cybersecurity Journey Blog</p>
+    </footer>
 </body>
 </html>
